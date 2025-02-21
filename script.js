@@ -39,6 +39,10 @@ const spreadsheetFunctions = {
   lasttwo: nums => nums.slice(-2),
   has2: nums => nums.includes(2),
   increment: nums => nums.map(element => element += 1),
+  random: nums => Math.floor(Math.random() * (nums[0] + nums[1])),
+  range: ([x, y]) => range(x, y),
+  nodupes: nums => [...new Set(nums)],
+  "": nums => nums,
 }
 
 const applyFunction = str => {
